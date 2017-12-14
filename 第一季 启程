@@ -1,0 +1,85 @@
+## 第一季 启程
+
+设置Git参数
+
+#显示当前的Git配置
+git config --list
+
+#设置提交仓库时的用户名信息
+git config --global user.name "hellowangjian"
+
+#设置提交仓库时的邮箱信息
+git config --global user.email "929XXXXXXXX@qq.com"
+
+#查看git版本
+git --version
+
+Git命令
+	git OPTIONS 
+
+新建代码仓库：
+	#在当前目录新建一个Git代码库
+	git init
+
+	#下载一个项目和它的整个代码历史
+	git clone [url]
+		url格式：https://github.com/[UserName]/ReposName
+
+添加删除文件：
+	#添加指定文件到暂存区
+	git add [file1] [file2]
+
+	#删除工作区文件，并且将这次删除放入暂存区
+	git rm [file1] [file2]
+
+	#改名文件，并且将这个改名放入暂存区
+	git mv [file-origin] [file-renamed]
+
+代码提交
+	#提交暂存区到仓库
+	git commit -m [message]
+
+	#直接从工作区提交到仓库
+	#前提该文件已经有仓库中的历史版本
+	git commit -a -m [message]
+
+查看信息
+	#显示变更信息
+	git status
+
+	#显示当前分支的历史版本
+	git log
+	git log --oneline
+
+同步远程仓库
+	#增加远程仓库，并命名
+	git remote add [shortname] [url]
+		eg:
+			git remote add origin https://github.com/hellowangjian/MageEdu-Linux.git
+
+	#将本地的提交推送到远程仓库
+	git push [remote] [branch]
+		eg:
+			git push origin master
+
+	#将远程仓库的提交拉下到本地
+	git pull [remote] [branch]
+		eg:
+			git pull origin master
+
+	#查看建立的远程仓库
+	git remote -v
+
+	https://github.com/sindresorhus/awesome
+	https://github.com/vhf/free-programming-books
+
+
+	https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013744142037508cf42e51debf49668810645e02887691000
+	HEAD指向的版本就是当前版本，因此，Git允许我们在版本的历史之间穿梭，使用命令git reset --hard commit_id。
+
+	穿梭前，用git log可以查看提交历史，以便确定要回退到哪个版本。
+
+	要重返未来，用git reflog查看命令历史，以便确定要回到未来的哪个版本。
+
+
+
